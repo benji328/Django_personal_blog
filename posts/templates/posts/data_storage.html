@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Resume - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="/static/posts/assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/static/posts/css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Benjamin Hsu</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="/static/posts/assets/img/profile.jpg" alt="" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'projects' %}">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'covid19_map' %}">Visualization write-up</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- covid19_map-->
+            <section class="resume-section" id="covid19_map">
+                <div class="resume-section-content">
+
+                    <!-- 文字超連結 or 圖片超連結-->
+                    <h2 class="mb-0">Geographical Data Visualization for High Dimensional Symbolic Data</h2>
+                    <p class="lead mb-5"></p>
+                    <p class="lead mb-5">   Due to the advent of data science, generating and collecting data became much easier, causing the scale of data to rapidly grow, and its data types have become more diverse. </p>
+                    <p class="lead mb-5">   A newly developed research is focusing on the computation efficiency and statistical analysis methods for high-dimensional geographical data. The current focus is on the numerical value of a single variable corresponding to its data value through the color level, and the geographic information is presented in the color of its corresponding color level. However, drawing the content of each variable on the map is required for presenting high-dimensional geographic data, causing this method to be inefficient and difficult for the researchers to use. Besides, if the data is symbolic and contains geographic information, the visualization of the map is even more challenging to achieve.</p>
+                    <p class="lead mb-5">   This project proposes a new method for map visualization of high-dimensional big data. In this project, a data record of 214 countries’ Covid-19 cases within the 315 days in the year 2020 was used. Each day, the cases of the 214 countries were sorted using the ranking method because the average of the cases can be greatly affected by the outliers. By calculating the Euclidean distance of the ranked values, we can then draw SVD using two eigenvectors to show the relationships between the countries. With the drawn graph, we can then get the radian measures of the values. The HSV value for each country is lastly determined by using the radian measures on a HSV graph. The method proposed in this project will resolve the prior mentioned problems and provide big high dimensional geographical data efficiency.</p>
+                    
+                    <script src="https://gist.github.com/25BenjaminH/ad2cfb182abafc7fea5d3e81f23bba55.js"></script>
+                    <img src="/static/posts/assets/img/content_img/DataCaseD.PNG" alt="" width="720" high="480"/>
+
+                    <script src="https://gist.github.com/25BenjaminH/d7acef9c40804278a618c1d7c788b7d7.js"></script>
+                    <img src="/static/posts/assets/img/content_img/scatter_plot.PNG" alt="" width="720" high="480"/>
+
+                    <script src="https://gist.github.com/25BenjaminH/e2426b9158298dc8f0ae9a7ab22e5da5.js"></script>
+                    <img src="/static/posts/assets/img/content_img/country_data.PNG" alt="" width="720" high="480"/>
+   
+                    <script src="https://gist.github.com/25BenjaminH/243965fd8fc2921930b598173d3182e7.js"></script>
+                    <img src="/static/posts/assets/img/content_img/eigenvector.PNG" alt="" width="720" high="480"/>
+                    
+                    <script src="https://gist.github.com/25BenjaminH/b3d5c5d569c07e37333fe88bcce737a8.js"></script>                    
+
+                    <script src="https://gist.github.com/25BenjaminH/bd6c65de1a36dba05ab2cdb524de2914.js"></script>
+
+                    <script src="https://gist.github.com/25BenjaminH/1120ddce7d6581714bd57593ece1afa8.js"></script>
+
+                    <script src="https://gist.github.com/25BenjaminH/c576969641ba1d34ed79b8b3b051ed7f.js"></script>
+                    <img src="/static/posts/assets/img/content_img/country_color.PNG" alt="" width="720" high="480"/>
+
+                    <script src="https://gist.github.com/25BenjaminH/219446cfbb2861384511e0134f9b8b56.js"></script>
+                    <img src="/static/posts/assets/img/content_img/worldmap-b.PNG" alt="" width="720" high="480"/>
+                    <img src="/static/posts/assets/img/content_img/worldmap-a.PNG" alt="" width="720" high="480"/>
+
+
+                    <p class="lead mb-5">This project was supported by the Ministry of Science and Technology. Dr. Chiun-How Kao is the principal investigator. His research interests are Data visualization, Big Data, and Data analysis.</p>
+                    <span class="lead mb-5">Data Source:</span>
+                    <a href="https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide"><span class="lead mb-5" >https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide</span>
+                    <br>
+                                    <p class="lead mb-5"><em>Supplementary Google Drive note links from the original site were omitted from this public code archive.</em></p>
+</div>
+            </section>
+            <hr class="m-0" />
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="/static/posts/js/scripts.js"></script>
+    </body>
+</html>

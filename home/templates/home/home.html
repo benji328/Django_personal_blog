@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Archived Django personal portfolio and project blog by Benjamin Hsu." />
+    <title>Benjamin Hsu | Django Project Blog</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'home/assets/img/favicon.ico' %}" />
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <link href="{% static 'home/css/styles.css' %}" rel="stylesheet" />
+</head>
+<body id="page-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none">Benjamin Hsu</span>
+        <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'home/assets/img/Ben.jpg' %}" alt="Profile" /></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#technology">Technology</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#archive">Archive</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container-fluid p-0">
+    <section class="resume-section" id="about">
+        <div class="resume-section-content">
+            <h1 class="mb-0">Benjamin <span class="text-primary">Hsu</span></h1>
+            <div class="subheading mb-5">Personal portfolio &amp; project blog</div>
+            <p class="lead mb-5">
+                This site began as an early Django web-development project and grew into a place to document programming and data-visualization work. The public repository preserves the application structure and project write-ups while removing obsolete private contact information and development secrets.
+            </p>
+            <div class="social-icons">
+                <a class="social-icon" href="https://github.com/25BenjaminH" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+    <hr class="m-0" />
+
+    <section class="resume-section" id="projects">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Projects &amp; Writing</h2>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0"><a href="{% url 'covid19_map' %}">Geographical Data Visualization for High-Dimensional Symbolic Data</a></h3>
+                    <div class="subheading mb-3">COVID-19 cases and deaths worldwide</div>
+                    <p>An archived write-up covering data preparation, distance calculations, SVD, color encoding, and world-map visualization for high-dimensional geographic COVID-19 data.</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">2020–2021</span></div>
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0"><a href="{% url 'data_storage' %}">Project Data &amp; Method Notes</a></h3>
+                    <div class="subheading mb-3">Supporting project page</div>
+                    <p>A shorter companion page describing the dataset and project context used by the visualization study.</p>
+                </div>
+            </div>
+            <a class="btn btn-primary" href="{% url 'projects' %}">View project index</a>
+        </div>
+    </section>
+    <hr class="m-0" />
+
+    <section class="resume-section" id="technology">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Technology</h2>
+            <div class="subheading mb-3">Built with</div>
+            <ul>
+                <li>Python and Django</li>
+                <li>Django templates and URL routing</li>
+                <li>HTML, CSS, Bootstrap, and JavaScript</li>
+                <li>SQLite for local Django development</li>
+                <li>Static project images and technical write-ups</li>
+            </ul>
+        </div>
+    </section>
+    <hr class="m-0" />
+
+    <section class="resume-section" id="archive">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Archive Note</h2>
+            <p>
+                This repository is a cleaned public archive of an older personal website. The original project was created several years ago, so its visual style and article text are preserved primarily as a record of early web-development and data-visualization work rather than as a current résumé.
+            </p>
+        </div>
+    </section>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="{% static 'home/js/scripts.js' %}"></script>
+</body>
+</html>

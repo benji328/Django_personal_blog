@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Project archive from Benjamin Hsu's Django portfolio blog." />
+    <title>Projects | Benjamin Hsu</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'home/assets/img/favicon.ico' %}" />
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <link href="{% static 'home/css/styles.css' %}" rel="stylesheet" />
+</head>
+<body id="page-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="{% url 'home' %}">
+        <span class="d-block d-lg-none">Benjamin Hsu</span>
+        <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'home/assets/img/Ben.jpg' %}" alt="Profile" /></span>
+    </a>
+    <div class="collapse navbar-collapse show" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'covid19_map' %}">COVID-19 visualization</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'data_storage' %}">Data notes</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid p-0">
+    <section class="resume-section">
+        <div class="resume-section-content">
+            <h1 class="mb-5">Projects</h1>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0"><a href="{% url 'covid19_map' %}">Geographical Data Visualization for High-Dimensional Symbolic Data</a></h3>
+                    <div class="subheading mb-3">COVID-19 cases and deaths worldwide</div>
+                    <p>An archived research/project write-up covering preparation of country-level time-series data, Euclidean distance, SVD, color encoding, and geographic visualization.</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">December 2020 – February 2021</span></div>
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-between">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0"><a href="{% url 'data_storage' %}">Project Data &amp; Method Notes</a></h3>
+                    <div class="subheading mb-3">Companion page</div>
+                    <p>Background and source information associated with the visualization project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'home/js/scripts.js' %}"></script>
+</body>
+</html>
